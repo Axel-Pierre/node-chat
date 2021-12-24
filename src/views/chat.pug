@@ -1,0 +1,29 @@
+extend layout.pug
+block variable
+	-const pagetitle = "Chat"
+
+block scripts
+	script(src="/socket.io/socket.io.js" defer)
+	script(src="/js/chat-client.js" defer)
+
+block content
+	h1 Bienvenue sur le chat #{pseudo}
+	
+	#chat-app
+		.chat-users
+			h2 Utilisateurs connectés
+			ul
+				
+
+		.chatbox-area
+			.chatbox-messages
+				.message
+						
+					
+				form(action="/chat" method="get").chatbox-form
+				input(type="text" name="message" placeholder="Votre message (Entrée pour valider)")
+mixin message
+	.message
+		.msg-date 01/01/2020, 15:30:17
+		.msg-user JM &gt;
+		.msg-message Salut les gens !
