@@ -12,7 +12,7 @@ const io = require("socket.io")(server)
 
 //déclarer un numero de port utilisé pour la creation du serveur
 
-const port = 1337
+const port = process.env.PORT || 1337;
 //app.use permet de gerer la route du serveur selon des parametre, il ses de fonction intermerdiaire de l'appli 
 //express, next() permet de faire passe à la suite des route si les conditions sont accepter
 app.use(helmet());
